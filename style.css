@@ -49,12 +49,19 @@ header p {
     font-size: 30px;
 }
 
-header button {
+header img {
+    width: 100%;
+}
+
+.header__img--wrapper {
+    width: 100%;
+    max-width: 600px;
+}
+
+.header__description--button {
     background-color: rgb(0, 212, 212);
     border: none;
     padding: 5px 5px;
-    min-width: 13%;
-    min-height: 7%;
     font-size: 16px;
     font-weight: bold;
     color: white;
@@ -77,14 +84,14 @@ header button {
     padding: 20px;
 }
 
-.about-content, .discord-content {
+.row {
     display: flex;
     padding: 35px;
     width: 100%;
     max-width: 1200px;
 }
 
-.about-content img {
+#about img {
     width: 100%;
 }
 
@@ -108,13 +115,13 @@ header button {
     padding: 20px;
 }
 
-.discord-content p {
+#discord p {
     padding-bottom: 24px;
     font-size: 18px;
     line-height: 1.4em;
 }
 
-.discord-content img {
+#discord img {
     width: 100%;
 }
 
@@ -137,6 +144,7 @@ header button {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    padding: 0 24px;
 }
 
 #contact label {
@@ -173,6 +181,7 @@ footer {
 }
 
 footer img {
+    width: 100%;
     max-width: 500px;
     padding: 24px;
 }
@@ -181,10 +190,60 @@ footer a {
     color: black;
     font-weight: bold;
     font-size: 24px;
-    padding-left: 25px;
+    padding: 0 12.5px;
 }
 
 footer p {
     padding: 30px;
     font-style: italic;
+}
+
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 728px) {
+    .row, header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .header__description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__description--button {
+        min-width: 240px;
+        margin-bottom: 20px;
+    }
+
+    #discord .row{
+        flex-direction: column-reverse;
+    }
+
+    p {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    footer {
+       padding: 0 24px;
+    }
+
+    .footer-links a {
+        font-size: 16px;
+        padding: 0 6px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
 }
